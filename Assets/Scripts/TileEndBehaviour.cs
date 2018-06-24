@@ -15,12 +15,13 @@ public class TileEndBehaviour : MonoBehaviour
 	void Update () {
 	}
 
+    private static int num = 0;
     void OnTriggerEnter(Collider col)
     {
         //First check if we collided with the player
         if (col.gameObject.GetComponent<PlayerBehaviour>())
         {
-            GameObject.FindObjectOfType<GameController>().SpawnNextTile();
+            GameObject.FindObjectOfType<GameController>().SpawnNextTile(num++ % 3 == 0);
 
             //And destroy this entire tile after a short delay
             Destroy(transform.parent.gameObject, detroyTime);

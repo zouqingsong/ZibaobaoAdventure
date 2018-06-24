@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ObstacleSpawn
+  - ObstacleObj
+  - zi
+  - tile
+  - floor
+  - tileend
+  - nexttilepos
   layers:
   - Default
   - TransparentFX
